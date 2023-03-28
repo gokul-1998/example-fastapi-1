@@ -13,3 +13,7 @@
 
 - how to make pytest stop executing other tests as soon a first failure occurs?
     - `pytest -v -x` - > `-x` makes it stop
+
+- conftest.py makes all th fixtures available for all the part of the tests including test_calculation.py automatically and we dont need to import anything
+
+lets say if we have conftest.py file in a folder "/test/api" then that conftest will be accessible only inside the api folder

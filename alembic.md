@@ -1,7 +1,7 @@
 - install alembic `pip install alembic`
 - free codecamp video at 10.34.00 minute
 - `alembic init alembic` -> will create a folder called alembic
-- inside the env file import the Base of database file
+- inside the env.py file import the Base of database file
 `from app.models import Base`
 - also change the `target_metadata = Base.metadata` to Base.metadata
 - put this in env.py file 
@@ -23,6 +23,6 @@ config.set_main_option("sqlalchemy.url",f"postgresql+psycopg2://{settings.databa
 - `alembic downgrade <revision id>` or `alembic downgrade -1` will take us one step down
 - `alembic revision -m "add user table"`
 - we can also do `alembic upgrade +1` to go one step up
-- `alembic revision -m "add foreign ket to post table"`
+- `alembic revision -m "add foreign key to post table"`
 - alembic is intelligent to find which column is left and will do the changes by itself.
 - `alembic revision --autogenerate -m "auto-vote"`
